@@ -1,0 +1,12 @@
+.immagine {
+    display: flex;
+    justify-content: center;
+}
+
+.sfondo {
+    background-color: lightskyblue;
+}
+
+.ciao{
+    background-color: orange;
+}
