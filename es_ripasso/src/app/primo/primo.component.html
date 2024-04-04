@@ -8,19 +8,19 @@
 <ng-template #bloccoInizio>
     <div class="container-fluid">
         <div class="row">
-            <div *ngFor="let element of posti index as i" class="col-md-5">
-            <div class="card mb-5">
+            <div *ngFor="let element of posti index as i" class="col-md-6">
+            <div class="card mb-6">
                 <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{element.nome}}</h1>
                 <br>
                 <br>
-                <img class="card-img-top" src="{{element.immagine}}" alt="Card image">
+                <img class="card-img-top" src="{{element.immaggine}}" alt="Card image">
                 <div class="card-body">
                     <br>
                     <br>
                     <br>
                     <br> 
                     <br>
-                    <button (click) = "setBtn(element.nome)" type="button" class="btn blu" style="margin-left: 225px; margin-right: 70px; font-family: Arial, Helvetica, sans-serif; font-size: x-large;" [ngClass]="{'azzurro':posti[i].nome=='milano', 'grigio':posti[i].nome=='new york', 'oro':posti[i].nome=='amsterdam', 'verde':posti[i].nome=='tenerife', 'blu':posti[i].nome=='lisbona' }"></button>
+                    <button (click) = "setBtn(element.nome)" type="button" class="btn blu" style="margin-left: 225px; margin-right: 70px; font-family: Arial, Helvetica, sans-serif; font-size: x-large;" [ngClass]="{'azzurro':posti[i].nome=='milano', 'grigio':posti[i].nome=='new york', 'oro':posti[i].nome=='amsterdam', 'verde':posti[i].nome=='tenerife', 'blu':posti[i].nome=='lisbona' }">{{element.nome}}</button>
                 </div>
             </div>
         </div>
@@ -38,11 +38,99 @@
             <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[0].nome}}</h1>
             <br>
             <br>
-            <img class="card-img-top" src="" alt="Card image">
+            <img class="card-img-top" src="{{posti[0].immaggine}}" alt="Card image">
             <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
                 <br>
                 <br>
                 <p>- NOME: {{posti[0].nome}}</p>
+                <p>- NAZIONE: {{posti[0].nazione}}</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
+            </div>
+    </div>
+</div>
+<br>
+
+</ng-template>
+
+<ng-template *ngIf = "name === 'new york'; then bloccoDue"></ng-template>
+
+<ng-template #bloccoDue>
+
+    <div class="container" style="width: 400px;">
+        <div class="card mb-5">
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[1].nome}}</h1>
+            <br>
+            <br>
+            <img class="card-img-top" src="{{posti[1].immaggine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
+                <br>
+                <br>
+                <p>- NOME: {{posti[1].nome}}</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
+            </div>
+    </div>
+</div>
+<br>
+
+</ng-template>
+
+<ng-template *ngIf = "name === 'amsterdam'; then bloccoTre"></ng-template>
+
+<ng-template #bloccoTre>
+
+    <div class="container" style="width: 400px;">
+        <div class="card mb-5">
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[2].nome}}</h1>
+            <br>
+            <br>
+            <img class="card-img-top" src="{{posti[2].immaggine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
+                <br>
+                <br>
+                <p>- NOME: {{posti[2].nome}}</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a  href="reload()"class="btn home" style="color: white; width: 200px; margin-left: 19%;">HOME</a> 
+            </div>
+    </div>
+</div>
+<br>
+
+</ng-template>
+
+<ng-template *ngIf = "name === 'tenerife'; then bloccoQuattro"></ng-template>
+
+<ng-template #bloccoQuattro>
+
+    <div class="container" style="width: 400px;">
+        <div class="card mb-5">
+            <h1 align="center" style="color: blue; margin-left:auto; margin-right:auto; font-family: Arial, Helvetica, sans-serif;">{{posti[3].nome}}</h1>
+            <br>
+            <br>
+            <img class="card-img-top" src="{{posti[3].immaggine}}" alt="Card image">
+            <div class="card-body" style="font-family: Arial, Helvetica, sans-serif; color: blue;" >
+                <br>
+                <br>
+                <p>- NOME: {{posti[3].nome}}</p>
                 <br>
                 <br>
                 <br>
