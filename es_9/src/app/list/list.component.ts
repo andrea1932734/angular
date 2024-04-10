@@ -9,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrl: './list.component.css'
 })
 export class ListComponent {
-
+  polaretti=[
+    {destinazione:"teegarden-b",appartenenza:"",durata:"", pianetadipartenza:"",partenza:"",arrivo:"",costo:"",immagine:""},
+    {destinazione:"",appartenenza:"",durata:"", pianetadipartenza:"",partenza:"",arrivo:"",costo:"",immagine:""},
+    {destinazione:"",appartenenza:"",durata:"", pianetadipartenza:"",partenza:"",arrivo:"",costo:"",immagine:""},
+    {destinazione:"",appartenenza:"",durata:"", pianetadipartenza:"",partenza:"",arrivo:"",costo:"",immagine:""},
+    {destinazione:"",appartenenza:"",durata:"", pianetadipartenza:"",partenza:"",arrivo:"",costo:"",immagine:""},
+    
+  ]
 }
