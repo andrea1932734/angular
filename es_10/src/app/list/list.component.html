@@ -1,20 +1,20 @@
-<h1 align="center" style="background-color: orange; color: white; font-family: MUSEO; font-size: xxx-large;">MOSTRE DISPONIBILI (7):</h1>
+<h1 align="center" style="color: rgb(255, 255, 255);">VIDEOGIOCHI:</h1>
+
+<br>
 <br>
 <div *ngFor="let element of mostre; index as i">
-    <div class="card mb-3" style="width: 1530px; height: 400px;  background-color: darkred; ">
+    <div class="card mb-3" style="width: 1530px; height: 400px;  background-color: rgb(0, 0, 0); ">
         <div class="row g-0">
           <div class="col-md-4">
             <img class="card-img-top" src="{{element.immagine}}" alt="Card image" style="height: 52vh; ">
           </div>
           <div class="col-md-8">
             <div class="card-body" style="font-family: MUSEO; color: white;">
-              <h2 align="center" style="color: white; margin-left:auto; margin-right:auto; font-family: MUSEO; font-size: xxx-large;">{{element.nome|uppercase}}</h2>
-              <p style="font-family: MUSEO; font-size: x-large;">INFORMAZIONI MOSTRA:</p>
-            <p>- NOME MOSTRA: {{element.nome}}</p>
-            <p>- ARTISTI PRINCIPALI: {{element.artisti}}</p>
-            <p>- BREVE DESCRIZIONE MOSTRA: {{element.descrizione}} </p>
-            <p>- DATA INIZIO MOSTRA: {{element.datainizio | date:'longDate'}}</p>
-            <p>- DATA FINE MOSTRA: {{element.datafine | date :'longDate'}} </p>
+              <h2 style="color: white; margin-left:auto; margin-right:auto; font-family: MUSEO; font-size: xxx-large;">{{element.nome|uppercase}}</h2>
+            <p>- NOME: {{element.nome}}</p>
+            <p>- CASA DI PRODUZIONE: {{element.casa}}</p>
+            <p>- BREVE DESCRIZIONE: {{element.descrizione}} </p>
+            <p>- DATA LANCIO: {{element.datalancio | date:'longDate'}}</p>
             <button (click)="routing(i)" class="button_1" style="font-family: MUSEO;" href="#" routerLink="/Mostre" >Scopri di più</button>
             </div>
           </div>
